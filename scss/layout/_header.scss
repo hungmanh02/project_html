@@ -23,6 +23,7 @@
         padding: 20px 0;
     }
     @include abstracts.breakpoint(sm){
+        justify-content: space-between;
         padding: 16px 0;
     }
 }
@@ -54,8 +55,11 @@
 }
 .top-act{
     @extend %flexItemCenter;
-    margin-left: auto;
     gap: 20px;
+    @include abstracts.breakpoint(sm){
+        margin-left: 0px;
+    }
+    margin-left: auto;
     &__group{
         @extend %flexItemCenter;
         min-width: 50px;
