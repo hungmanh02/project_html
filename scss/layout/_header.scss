@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 %flexItemCenter{
     display: flex;
     align-items: center;
@@ -5,6 +7,9 @@
 .header{
     // background: #eeeeee;
     background: var(--header-bg-color);
+    @include abstracts.breakpoint(lg){
+        width: 100px;
+    }
 }
 .top-bar{
     @extend %flexItemCenter;
