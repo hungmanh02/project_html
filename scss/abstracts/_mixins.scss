@@ -13,6 +13,6 @@ $grid-breakpoints: (
             @content;
         }
     } @else {
-        @error "Breakpoint #{$key} not found in  map.";
+        @error 'Breakpoint "#{$key}" not found in  map.';
     }
 }
