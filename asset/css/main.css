@@ -135,6 +135,11 @@ table {
   box-sizing: border-box;
 }
 
+:root {
+  --text-color:#1a162e;
+  --icon-color:brightness(0) saturate(100%) invert(8%) sepia(8%) saturate(5318%) hue-rotate(212deg) brightness(96%) contrast(95%);
+}
+
 html {
   font-size: 62.5%;
 }
@@ -142,6 +147,28 @@ html {
 body {
   font-size: 1.6rem;
   font-family: Gordita, sans-serif;
+  color: var(--text-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+.icon {
+  filter: var(--icon-color);
 }
 
 .row > *, .container-fluid, .container {
@@ -1174,6 +1201,83 @@ body {
   .gy-xxl-5 {
     --grid-gutter-y: 90px;
   }
+}
+.top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  background: #f0a6a6;
+}
+
+.top-bar {
+  padding: 30px 0;
+}
+
+.navbar {
+  margin-left: 144px;
+  margin-right: auto;
+}
+.navbar__list {
+  gap: 30px;
+}
+.navbar__link {
+  gap: 6px;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.navbar__arrow {
+  margin-top: 4px;
+}
+
+.top-act {
+  gap: 20px;
+}
+.top-act__group {
+  min-width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background: var(--Secondary-Color-Background, #FFF);
+  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+}
+.top-act__group--single .top-act__btn {
+  padding: 13px;
+}
+.top-act__btn {
+  gap: 10px;
+  padding: 13px 20px;
+  cursor: pointer;
+}
+.top-act__title {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.top-act__separate {
+  width: 1px;
+  height: 30px;
+  background: #7777a0;
+}
+.top-act__avatar {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.logo__title {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 145.455%;
 }
 
 /*# sourceMappingURL=main.css.map */
