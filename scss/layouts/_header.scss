@@ -20,6 +20,7 @@
         
     }
     @include abstracts.breakpoint(lg){
+        justify-content: space-between;
         padding: 20px 0;
     }
     @include abstracts.breakpoint(sm){
@@ -50,12 +51,14 @@
     &__arrow{
         margin-top: 4px;
     }
-    
 }
 .top-act{
     @extend %flexItemCenter;
     margin-left: auto;
     gap: 20px;
+    @include abstracts.breakpoint(sm){
+        margin-left: 0;
+    }
     &__group{
         @extend %flexItemCenter;
         min-width: 50px;
@@ -69,7 +72,7 @@
     }
     &__group--single{
         @include abstracts.breakpoint(lg){
-       display: none
+       display: none;
     }
     }
     &__group--single &__btn{
