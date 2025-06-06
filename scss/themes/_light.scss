@@ -2,16 +2,6 @@
 html{
   --text-color:#1A162E;
   --icon-color:brightness(0) saturate(100%) invert(8%) sepia(8%) saturate(5318%) hue-rotate(212deg) brightness(96%) contrast(95%);
-<<<<<<< HEAD:scss/themes/_light.scss
---header-bg-color:#f0a6a6;
- --body-bg-color: #f6f6f6;
---top-act-group-bg-color:#fff;
---top-act-group-shadow:rgba(237, 237, 246, 0.20);
---top-act-group-separate:#c1c1db;
-  @include abstracts.breakpoint(xl){
-    --header-bg-color:#fff;
-  }
-=======
   --header-bg-color:#EEE;
   --body-bg-color:#F6f6f6;
   --top-act-group-bg-color:#fff;
@@ -20,5 +10,7 @@ html{
   @include abstracts.breakpoint(lg){
      --header-bg-color:#fff;
   };
->>>>>>> 1292b66331a0a0384791d5f56c62f39c8fa9a5bc:scss/theme/_light.scss
+  // Dropdown
+  --dropdown-bg-color:#fff;
+  --dropdown-shadow-color:rgba(200, 200, 200, 0.4);
 }

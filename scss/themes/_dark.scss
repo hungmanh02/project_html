@@ -2,12 +2,12 @@ html.dark{
   --text-color:#fff;
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(119deg) brightness(107%) contrast(106%);
   --header-bg-color:#171C28;
-<<<<<<< HEAD:scss/themes/_dark.scss
   --body-bg-color: #292e39;
-=======
-  --body-bg-color:#292e39;
->>>>>>> 1292b66331a0a0384791d5f56c62f39c8fa9a5bc:scss/theme/_dark.scss
 --top-act-group-bg-color:#292E39;
 --top-act-group-shadow:rgba(0, 0, 0, 0.20);
 --top-act-group-separate:#EDEDF6;
+// Dropdown
+  --dropdown-bg-color:#2f3441;
+  --dropdown-shadow-color:rgba(23, 28, 40, 0.4);
+  --dropdown-arrow-color: brightness(0) saturate(100%) invert(14%) sepia(6%) saturate(2671%) hue-rotate(186deg) brightness(97%) contrast(81%);
 }
