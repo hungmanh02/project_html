@@ -9,6 +9,7 @@ html{
   --top-act-group-separate:#c1c1db;
   @include abstracts.breakpoint(lg){
      --header-bg-color:#fff;
+     --box-shadow-color:rgba(237, 237 246, 0.20);
   };
   // Dropdown
   --dropdown-bg-color:#fff;
