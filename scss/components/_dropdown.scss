@@ -5,10 +5,8 @@
     padding-top: 50px;
     display:none;
     &__inner{
-        --inner-max-height:min(582px,(100vh - 158px));
         --inner-padding:30px;
         position: relative;
-        max-height: var(--inner-max-height);
         padding: var(--inner-padding);
         border-radius: 20px;
         background:  var(--dropdown-bg-color);
@@ -25,10 +23,11 @@
     }
 }
 .top-menu{
-    max-height: calc(var(--inner-max-height) - var(--inner-padding) * 2); 
+    --main-column-width: 292px;
+    position: relative;
     &__main{
-        width: 292px;
-        max-height: inherit; // kế thừa từ top menu
+        width: var(--main-column-width);
+        max-height: calc(min(582px,(100vh - 158px)) - var(--inner-padding) * 2); // kế thừa từ top menu
         border-right: 1px solid var(--top-menu-border-color);
         overflow-y: auto;
     }
@@ -36,6 +35,9 @@
 .menu-column{
     display: flex;
     gap: 14px;
+    + .menu-column{
+        margin-top: var(--inner-padding);
+    }
     &__icon{
         position: relative;
         flex-shrink: 0; // chánh icon bị co lại
@@ -80,4 +82,13 @@
             font-weight: 500;
         }
     }
+}
+.sub-menu{
+position: absolute;
+inset: 0 0 0  var(--main-column-width);
+
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 30px;
+padding-left: var(--inner-padding);
 }
