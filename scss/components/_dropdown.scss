@@ -4,7 +4,7 @@
     left: 0;
     width: min(1240px,100%);
     padding-top: 50px;
-    display:block;
+    display:none;
     &__inner{
         --inner-padding:30px;
         position: relative;
@@ -77,10 +77,12 @@
         margin-top: 19px;
     }
     &__item{
-        &:hover .sub-menu{
+        &:hover .sub-menu,
+        &--active .sub-menu{
             display: grid;
         }
     }
+    &__item--active > &__link,
     &__item:hover > &__link{
         color: #0071dc;
         font-weight: 500;
@@ -96,7 +98,7 @@
 position: absolute;
 inset: 0 0 0  var(--main-column-width);
 
-display: grid;
+display: none;
 grid-template-columns: repeat(3, 1fr);
 gap: 30px;
 padding-left: var(--inner-padding);
