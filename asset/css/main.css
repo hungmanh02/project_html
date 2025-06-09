@@ -1393,6 +1393,7 @@ html {
   left: 0;
   width: min(1240px, 100%);
   padding-top: 50px;
+  display: none;
 }
 .dropdown__inner {
   --inner-padding:30px;
@@ -1467,6 +1468,11 @@ html {
 }
 .menu-column__list {
   margin-top: 19px;
+}
+@media (max-width: 991.98px) {
+  .menu-column__list {
+    margin-top: 0;
+  }
 }
 .menu-column__item:hover .sub-menu, .menu-column__item--active .sub-menu {
   display: grid;

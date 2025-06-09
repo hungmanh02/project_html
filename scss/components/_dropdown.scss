@@ -4,7 +4,7 @@
     left: 0;
     width: min(1240px,100%);
     padding-top: 50px;
-    // display:none;
+    display:none;
     &__inner{
         --inner-padding:30px;
         position: relative;
@@ -40,6 +40,7 @@
     + .menu-column{
         margin-top: 22px;
     }
+    
     &__icon{
         position: relative;
         flex-shrink: 0; // chánh icon bị co lại
@@ -51,7 +52,6 @@
     }
     &__content{
         flex:1;
-        
     }   
     &__icon-1{
         width: 30px;
@@ -76,12 +76,17 @@
         }
     &__list{
         margin-top: 19px;
+        @include abstracts.breakpoint(lg){
+            margin-top: 0;
+        }
+        
     }
     &__item{
         &:hover .sub-menu,
         &--active .sub-menu{
             display: grid;
         }
+        // gap: 14px;
     }
     &__item--active > &__link,
     &__item:hover > &__link{
