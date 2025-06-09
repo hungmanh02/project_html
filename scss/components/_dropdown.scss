@@ -72,23 +72,29 @@
     &__list{
         margin-top: 19px;
     }
+    &__item{
+        &:hover .sub-menu{
+            display: grid;
+        }
+    }
+    &__item:hover > &__link{
+        color: #0071dc;
+        font-weight: 500;
+    }
     &__link{
         display: block;
         padding: 7px 0;
         font-size: 1.4rem;
         line-height: 142.857%; /* 142.857% */
-        &:hover{
-            color: #0071dc;
-            font-weight: 500;
-        }
     }
 }
 .sub-menu{
 position: absolute;
 inset: 0 0 0  var(--main-column-width);
 
-display: grid;
+display: none;
 grid-template-columns: repeat(3, 1fr);
 gap: 30px;
 padding-left: var(--inner-padding);
+overflow-y: auto;
 }
