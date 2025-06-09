@@ -1392,20 +1392,20 @@ html {
   position: absolute;
   left: 0;
   width: min(1240px, 100%);
-  padding-top: 50px;
+  padding-top: 54px;
   display: none;
 }
 .dropdown__inner {
-  --inner-padding:30px;
+  --inner-padding: 30px;
   position: relative;
+  border: 1px solid;
   padding: var(--inner-padding);
   border-radius: 20px;
   background: var(--dropdown-bg-color);
-  box-shadow: 0px 40px 90px 20px --dropdown-bg-color;
-  border: 1px solid;
+  box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
 }
 .dropdown__inner::before {
-  content: url(../icons/dropdown-arrow.svg);
+  content: url("../icons/dropdown-arrow.svg");
   position: absolute;
   top: -13px;
   left: var(--arrow-left-pos);
@@ -1415,12 +1415,11 @@ html {
 
 .top-menu {
   --main-column-width: 292px;
-  --max-inner-height:calc(min(582px,(100vh - 158px)) - var(--inner-padding) * 2);
   position: relative;
 }
 .top-menu__main {
   width: var(--main-column-width);
-  max-height: var(--max-inner-height);
+  height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
   border-right: 1px solid var(--top-menu-border-color);
   overflow-y: auto;
 }
@@ -1452,12 +1451,12 @@ html {
   object-fit: contain;
 }
 .menu-column__icon-2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
   width: 24px;
   height: 24px;
   object-fit: contain;
-  position: absolute;
-  bottom: 0;
-  right: 0;
   filter: var(--menu-column-icon-color);
 }
 .menu-column__heading {
@@ -1469,12 +1468,7 @@ html {
 .menu-column__list {
   margin-top: 19px;
 }
-@media (max-width: 991.98px) {
-  .menu-column__list {
-    margin-top: 0;
-  }
-}
-.menu-column__item:hover .sub-menu, .menu-column__item--active .sub-menu {
+.menu-column__item--active .sub-menu {
   display: grid;
 }
 .menu-column__item--active > .menu-column__link, .menu-column__item:hover > .menu-column__link {
@@ -1485,7 +1479,7 @@ html {
   display: block;
   padding: 7px 0;
   font-size: 1.4rem;
-  line-height: 142.857%; /* 142.857% */
+  line-height: 142.857%;
 }
 
 .sub-menu {
@@ -1493,7 +1487,7 @@ html {
   inset: 0 0 0 var(--main-column-width);
   display: none;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: var(--inner-padding);
   padding-left: var(--inner-padding);
   overflow-y: auto;
 }
