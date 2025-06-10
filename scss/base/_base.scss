@@ -22,10 +22,11 @@ button{
   outline: none;
   background: transparent;
 }
-button,input,textarea,select {
+a,img,button,input,textarea,select {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 .icon{
   filter: var(--icon-color);
