@@ -43,7 +43,6 @@
     inset: 0 50% 0 0;
     background: #fff;
     margin-left: 0;
-    border: 1px solid;
     z-index: 2;
     padding: 20px 0;
     translate:-100%;
@@ -94,7 +93,10 @@
             width: 100%;
             &:hover .dropdown{
             display: none;
-        }
+            }
+            &--active .dropdown{
+                display: block !important;
+            }
         }
     }
     &__link{
@@ -116,6 +118,14 @@
     }
     &__arrow{
         margin-top: 4px;
+        @include abstracts.breakpoint(lg){
+            rotate: -90deg;
+        }
+    }
+    &__item--active &__arrow{
+        @include abstracts.breakpoint(lg){
+            rotate: 0deg;
+        }
     }
 }
 .top-act{

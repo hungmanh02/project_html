@@ -9,16 +9,13 @@
     display: none;
     @include abstracts.breakpoint(lg) {
         position: initial;
-        display: block;
         padding-top: 0px;
     }
    
-
     &__inner {
         --inner-padding: 30px;
 
         position: relative;
-         border: 1px solid;
 
         padding: var(--inner-padding);
 
@@ -121,6 +118,9 @@
 
     &__list {
         margin-top: 19px;
+        @include abstracts.breakpoint(lg) {
+            margin-top: 0;
+        }
     }
 
     &__item {
@@ -160,6 +160,7 @@
         grid-template-columns: 1fr;
         height: var(--max-inner-height);
         padding-left: 0;
+        display: none;
     }
     &--not-main{
     position: initial;
@@ -168,5 +169,11 @@
     grid-template-columns: repeat(4, 1fr);
     height: var(--max-inner-height);
     padding-left: 0;
+    @include abstracts.breakpoint(lg) {
+        grid-template-columns: 1fr;
+        height: auto;
+        display: none;
+    }
+    
 }
 }

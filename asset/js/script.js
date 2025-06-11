@@ -114,6 +114,7 @@ function handleActiveMenu() {
             if (!items.length) return;
 
             removeActive(menu);
+            if (window.innerWidth > 991)
             items[0].classList.add(activeClass);
 
             Array.from(items).forEach((item) => {
@@ -121,6 +122,12 @@ function handleActiveMenu() {
                     if (window.innerWidth <= 991) return;
                     removeActive(menu);
                     item.classList.add(activeClass);
+                };
+                item.onclick = () => {
+                    if (window.innerWidth > 991) return;
+                    removeActive(menu);
+                    item.classList.add(activeClass);
+                    item.scrollIntoView();
                 };
             });
         });
@@ -161,5 +168,15 @@ function initJsToggle() {
         };
     });
 }
+window.addEventListener("template-loaded", () => {
+    const links = $$(".js-dropdown-list > li > a");
 
+    links.forEach((link) => {
+        link.onclick = () => {
+            if (window.innerWidth > 991) return;
+            const item = link.closest("li");
+            item.classList.toggle("navbar__item--active");
+        };
+    });
+});
 
