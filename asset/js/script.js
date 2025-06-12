@@ -114,8 +114,7 @@ function handleActiveMenu() {
             if (!items.length) return;
 
             removeActive(menu);
-            if (window.innerWidth > 991)
-            items[0].classList.add(activeClass);
+            if (window.innerWidth > 991) items[0].classList.add(activeClass);
 
             Array.from(items).forEach((item) => {
                 item.onmouseenter = () => {
@@ -168,6 +167,7 @@ function initJsToggle() {
         };
     });
 }
+
 window.addEventListener("template-loaded", () => {
     const links = $$(".js-dropdown-list > li > a");
 
@@ -179,4 +179,3 @@ window.addEventListener("template-loaded", () => {
         };
     });
 });
-

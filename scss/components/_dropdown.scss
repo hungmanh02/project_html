@@ -38,6 +38,9 @@
             &::before{content: none;}
             padding: 0 40px;
         }
+        @include abstracts.breakpoint(sm) {
+            padding: 0 20px;
+        }
     }
 }
 
