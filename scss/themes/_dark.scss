@@ -7,7 +7,7 @@ html.dark{
 --top-act-group-bg-color:#292E39;
 --top-act-group-shadow:rgba(0, 0, 0, 0.20);
 --top-act-group-separate:#EDEDF6;
-  @include abstracts.breakpoint(lg){
+  @include abstracts.screen(lg){
      --box-shadow-color:rgba(0, 0 0, 0.20);
   };
 // Dropdown

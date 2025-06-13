@@ -4,23 +4,23 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
     gap: 10px;
     margin-left: 40px;
     }
-    @include abstracts.breakpoint(md) {
+    @include abstracts.screen(md) {
     margin-left: 0;
     }
     &__title{
         font-size: 22px;
         font-weight: 700;
         line-height: 145.455%;
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             font-size: 18px;
         }
     }
     &__img{
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             width: 24px;
         }
         

@@ -7,7 +7,7 @@ html{
   --top-act-group-bg-color:#fff;
   --top-act-group-shadow:rgba(237, 237, 246, 0.20);
   --top-act-group-separate:#c1c1db;
-  @include abstracts.breakpoint(lg){
+  @include abstracts.screen(lg){
      --header-bg-color:#fff;
      --box-shadow-color:rgba(237, 237 246, 0.20);
   };

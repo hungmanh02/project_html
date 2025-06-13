@@ -6,13 +6,13 @@ $grid-breakpoints: (
     xl: 1200px,
     xxl: 1400px,
 );
-@mixin breakpoint($key){
+@mixin screen($key){
     $breakpoint: map-get($grid-breakpoints, $key);
     @if ($breakpoint) {
         @media (max-width: ($breakpoint - 0.02)) {
             @content;
         }
     } @else {
-        @error 'Breakpoint "#{$key}" not found in  map.';
+        @error 'Screen "#{$key}" not found in  map.';
     }
 }
