@@ -1384,7 +1384,7 @@ html {
 }
 .dropdown__inner::before {
   position: absolute;
-  content: url("../images/dropdown-arrow.svg");
+  content: url("./asset/icons/dropdown-arrow.svg");
   left: 350px;
   top: -15px;
 }/*# sourceMappingURL=main.css.map */
