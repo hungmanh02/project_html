@@ -95,10 +95,44 @@
      <section class="home__container">
         <div class="home__row">
             <h2 class="home__heading">Total LavAzza 1320</h2>
-            <button class="filter-btn">
-                Filter 
-                <img src="./asset/icons/filter.svg" alt="" class="filter-btn__icon icon">
-            </button>
+            <div class="filter-wrap">
+                <button class="filter-btn">
+                    Filter 
+                    <img src="./asset/icons/filter.svg" alt="" class="filter-btn__icon icon">
+                </button>
+                <div class="filter">
+                    <h3 class="filter__heading">Filter</h3>
+                    <form action="" class="filter__form">
+                        <div class="filter__row">
+                            <!-- Filter col 1 -->
+                            <div class="filter__col">
+                                <label for="" class="filter__form-label">Price</label>
+                                <div class="filter__form-group">
+                                    <div class="filter__form-slider"></div>
+                                </div>
+                                <div class="filter__form-group filter__form-group--inline">
+                                    <div>
+                                        <label for="" class="filter__form-label filter__form-label-small">
+                                            Minimum
+                                        </label>
+                                        <input type="text" class="filter__form-input" value="$30.00">
+                                    </div>
+                                    <div>
+                                        <label for="" class="filter__form-label filter__form-label-small">
+                                            Maximum
+                                        </label>
+                                        <input type="text" class="filter__form-input" value="$100.000">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Filter col 2 -->
+                            <div class="filter__col"></div>
+                            <!-- Filter column 3 -->
+                            <div class="filter__col"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
         <div class="row row-cols-4 row-cols-lg-2  row-cols-md-1 row-cols-sm-1 g-3">
             <!-- Product Card 1 -->
