@@ -30,6 +30,7 @@ a,img,button,input,textarea,select {
   font-size: inherit;
   color: inherit;
   -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 .icon{
   filter: var(--icon-color);
