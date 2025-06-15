@@ -170,6 +170,13 @@ a, img, button, input, textarea, select {
   filter: var(--icon-color);
 }
 
+@media (max-width: 575.98px) {
+  .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
 .row > *, .container-fluid, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
   padding-right: calc(var(--grid-gutter-x) * 0.5);
@@ -1981,6 +1988,16 @@ html {
   box-shadow: 0px 20px 60px var(--like-btn-shadow);
   border-radius: 50%;
 }
+.like-btn:not(.like-btn__liked) .like-btn__icon--liked {
+  display: none;
+}
+.like-btn__liked .like-btn__icon {
+  display: none;
+}
+.like-btn__icon--liked {
+  position: relative;
+  margin-top: 6px;
+}
 
 .product-card {
   padding: 16px;
@@ -2025,7 +2042,7 @@ html {
   align-items: center;
 }
 .product-card__star {
-  margin: 0px 6px 0px;
+  margin: 0px 6px 0px auto;
 }
 
 .home__container {
@@ -2043,7 +2060,6 @@ html {
 }
 .home__cate {
   --grid-gutter-x:51px;
-  margin-top: 20px;
 }
 @media (max-width: 991.98px) {
   .home__cate {
