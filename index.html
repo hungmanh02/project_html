@@ -96,11 +96,12 @@
         <div class="home__row">
             <h2 class="home__heading">Total LavAzza 1320</h2>
             <div class="filter-wrap">
-                <button class="filter-btn">
+                <button class="filter-btn js-toggle" toggle-target="#home-filter">
                     Filter 
                     <img src="./asset/icons/filter.svg" alt="" class="filter-btn__icon icon">
                 </button>
-                <div class="filter">
+                <div id="home-filter" class="filter hide">
+                    <img src="./asset/icons/arrow-up.png" alt="" class="filter__arrow">
                     <h3 class="filter__heading">Filter</h3>
                     <form action="" class="filter__form">
                         <div class="filter__row">
@@ -147,9 +148,9 @@
                                 </div>
                                 <div class="filter__form-group">
                                     <div class="filter__form-tags">
-                                        <button class="filter__form-tag">Small</button>
-                                        <button class="filter__form-tag">Medium</button>
-                                        <button class="filter__form-tag">Large</button>
+                                        <button class="filter__form-tag">Lavazza</button>
+                                        <button class="filter__form-tag">Nescafe</button>
+                                        <button class="filter__form-tag">Starbucks</button>
                                     </div>
                                 </div>
                             </div>
@@ -171,6 +172,10 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="filter__row filter__footer">
+                            <button class="btn btn--text filter__cancel js-toggle" toggle-target="#home-filter">Cancel</button>
+                            <button class="btn btn--primary filter__submit js-toggle" toggle-target="#home-filter">Show Result</button>
                         </div>
                     </form>
                 </div>
