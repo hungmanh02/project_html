@@ -1623,6 +1623,26 @@ html {
   margin-left: auto;
 }
 
+.footer {
+  padding: 60px 0;
+}
+.footer__row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.footer__heading {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+.footer__list {
+  margin-top: 30px;
+}
+.footer__link {
+  display: inline-block;
+  padding: 8px 0;
+}
+
 .logo {
   display: flex;
   align-items: center;

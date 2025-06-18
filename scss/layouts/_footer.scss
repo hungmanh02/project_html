@@ -1,0 +1,22 @@
+.footer{
+    padding: 60px 0;
+    &__inner{
+
+    }
+    &__row{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    &__heading{
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 1.8rem;
+    }
+    &__list{
+        margin-top: 30px;
+    }
+    &__link{
+        display: inline-block;
+        padding: 8px 0;
+    }
+}
