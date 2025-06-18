@@ -46,9 +46,7 @@
 
 .top-menu {
     --main-column-width: 292px;
-
     position: relative;
-
     &__main {
         width: var(--main-column-width);
         height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
